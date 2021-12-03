@@ -8,77 +8,168 @@ $e : #3498db;
     background-color: $a;
 }
 
-.circle{
-    position: fixed;
-    border-radius: 50%;
-    background: white;
-    animation: ripple 15s infinite;
-  }
-  
-  .small{
-    width: 200px;
-    height: 200px;
-    left: -100px;
-    bottom: -100px;
-  }
-  
-  .medium{
-    width: 400px;
-    height: 400px;
-    left: -200px;
-    bottom: -200px;
-  }
-  
-  .large{
-    width: 600px;
-    height: 600px;
-    left: -300px;
-    bottom: -300px;
-  }
-  
-  .xlarge{
-    width: 800px;
-    height: 800px;
-    left: -400px;
-    bottom: -400px;
-  }
-  
-  .xxlarge{
-    width: 1000px;
-    height: 1000px;
-    left: -500px;
-    bottom: -500px;
-  }
-  
-  .shade1{
-    opacity: 0.2;
-  }
-  .shade2{
-    opacity: 0.5;
-  }
-  
-  .shade3{
-    opacity: 0.7;
-  }
-  
-  .shade4{
-    opacity: 0.8;
-  }
-  
-  .shade5{
-    opacity: 0.9;
-  }
-  
-  @keyframes ripple{
-    0%{
-      transform: scale(0.8);
+.class1a{
+  //color : $a;
+  font-size: 2.5vw;
+  margin-top: 30px;
+  margin-left: 15%;
+  animation: slide-in-left 3s 1s ease-in-out both;
+}
+
+.class1b{
+  //color : $a;
+  font-size: 5vw;
+  margin-top: 10px;
+  margin-left: 20%;
+  animation: slide-in-left 3s 1s ease-in-out both;
+}
+
+.class1c{
+  margin-right: 1%;
+  font-size: 2vw;
+  text-align: right;
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto 25vw;
+    grid-template-areas:
+      'medium right';
+    grid-gap: 20px;
+    // background-color: #2196F3;
+    // padding: 10px;
+    .item1 { 
+      grid-area: medium;
+      ul{
+        list-style-type: none;
+      }
     }
-    
-    50%{
-      transform: scale(1.2);
-    }
-    
-    100%{
-      transform: scale(0.8);
+    .item2 { 
+      grid-area: right; 
     }
   }
+  img{
+    margin-top: 10px;
+    width: 25vw;
+    border-radius: 40px;
+    border : solid white 5px;
+    border-right: 0;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    animation: slide-in-right 3s 1s ease-in-out both;
+  }
+  animation: slide-in-right 3s 1s ease-in-out both;
+}
+
+
+#container {
+  font-size:50px;
+  font-weight:bold;
+  padding-top: 15vmin;
+  width:100%;
+  display:block;
+}
+
+#flip {
+  height:70px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:58px;
+  margin-bottom:30px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 10s linear infinite;
+}
+
+#flip div div {
+  background:$e;
+}
+#flip div:nth-child(2) div {
+  background:$b;
+}
+#flip div:nth-child(3) div {
+  background:$c;
+}
+#flip div:nth-child(4) div {
+  background:$d;
+}
+#flip div:last-child div {
+  background: rgba(83, 243, 9, 0.5);
+}
+
+@keyframes show {
+  0% {margin-top:-450px;}
+  10% {margin-top:-360px;}
+  20% {margin-top:-360px;}
+  30% {margin-top:-270px;}
+  40% {margin-top:-270px;}
+  50% {margin-top:-180px;}
+  60% {margin-top:-180px;}
+  70% {margin-top:-90px;}
+  80% {margin-top:-90px;}
+  90% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-360px;}
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    *{
+      position: relative;
+      z-index: 5;
+    }
+    .class1a{
+      font-size: 7.5vw;
+      margin : auto;
+      margin-left: 1%;
+      margin-top: 50px;
+    }
+    .class1b{
+      font-size: 15vw;
+      margin : auto;
+      margin-left: 1%;
+      margin-top: 20px;
+    }
+    .class1c {
+      font-size: 6.5vw;
+      .grid-container {
+        grid-template-columns: auto 55vw;
+        grid-gap: 0;
+      }
+      img{
+        width: 50vw;
+      }
+    }
+
+    #container {
+      font-size:15px;
+    }
+
+    #flip {
+      height:45px;
+    }
+
+    #flip > div > div {
+      //padding:4px 12px;
+      height:30px;
+      margin-bottom:30px;
+    }
+
+    @keyframes show {
+      0% {margin-top:-225px;}
+      10% {margin-top:-180px;}
+      20% {margin-top:-180px;}
+      30% {margin-top:-135px;}
+      40% {margin-top:-135px;}
+      50% {margin-top:-90px;}
+      60% {margin-top:-90px;}
+      70% {margin-top:-45px;}
+      80% {margin-top:-45px;}
+      90% {margin-top:0px;}
+      99.99% {margin-top:0px;}
+      100% {margin-top:-180px;}
+    }
+}

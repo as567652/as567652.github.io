@@ -10,6 +10,8 @@ import { Page3Component } from './page3/page3.component';
 import { Page4Component } from './page4/page4.component';
 import { FooterComponent } from './footer/footer.component';
 import { Page5Component } from './page5/page5.component';
+import { HeaderComponent } from './header/header.component';
+import { CircleAnimationComponent } from './circle-animation/circle-animation.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { Page5Component } from './page5/page5.component';
     Page3Component,
     Page4Component,
     FooterComponent,
-    Page5Component
+    Page5Component,
+    HeaderComponent,
+    CircleAnimationComponent
   ],
   imports: [
     BrowserModule,
