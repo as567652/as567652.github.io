@@ -4,172 +4,84 @@ $c : #e74c3c;
 $d : #9b59b6;
 $e : #3498db;
 
-*{
+.box{
     background-color: $a;
+    height: 100vh;
 }
 
-.class1a{
-  //color : $a;
-  font-size: 2.5vw;
-  margin-top: 30px;
-  margin-left: 15%;
-  animation: slide-in-left 3s 1s ease-in-out both;
+.main {
+  padding: 0;
+  margin-top: 40px;
+  height: 30%;
 }
 
-.class1b{
-  //color : $a;
-  font-size: 5vw;
-  margin-top: 10px;
-  margin-left: 20%;
-  animation: slide-in-left 3s 1s ease-in-out both;
+.image {
+  border : white solid 4px;
+  border-radius: 10%;
+  width: 50vmin;
+  position: relative;
+  z-index: 5;
 }
 
-.class1c{
-  margin-right: 1%;
-  font-size: 2vw;
+.bar {
+  background-color: white;
+  width: 2vh;
+}
+
+.name {
+  font-weight: 800;
+  font-size: 7.5vh;
+  text-decoration: underline;
+  -webkit-text-decoration-style: double;
+  text-decoration-style: double;
+}
+
+.name1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 3.5vh;
   text-align: right;
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto 25vw;
-    grid-template-areas:
-      'medium right';
-    grid-gap: 20px;
-    // background-color: #2196F3;
-    // padding: 10px;
-    .item1 { 
-      grid-area: medium;
-      ul{
-        list-style-type: none;
-      }
-    }
-    .item2 { 
-      grid-area: right; 
-    }
-  }
+}
+
+.carousel-item{
+  color: white;
+}
+
+.carousel-item:nth-child(1){
+  background-color: $b;
+}
+.carousel-item:nth-child(2){
+  background-color: $c;
+}
+.carousel-item:nth-child(3){
+  background-color: $d;
+}
+.carousel-item:nth-child(4){
+  background-color: $e;
+}
+
+.caro {
+  font-weight: 800;
+  font-size: 5vh;
+}
+
+.newimg{
   img{
-    margin-top: 10px;
-    width: 25vw;
-    border-radius: 40px;
-    border : solid white 5px;
-    border-right: 0;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    animation: slide-in-right 3s 1s ease-in-out both;
+    width: -webkit-fill-available;
   }
-  animation: slide-in-right 3s 1s ease-in-out both;
 }
 
-
-#container {
-  font-size:50px;
-  font-weight:bold;
-  padding-top: 15vmin;
-  width:100%;
-  display:block;
-}
-
-#flip {
-  height:70px;
-  overflow:hidden;
-}
-
-#flip > div > div {
-  color:#fff;
-  padding:4px 12px;
-  height:58px;
-  margin-bottom:30px;
-  display:inline-block;
-}
-
-#flip div:first-child {
-  animation: show 10s linear infinite;
-}
-
-#flip div div {
-  background:$e;
-}
-#flip div:nth-child(2) div {
-  background:$b;
-}
-#flip div:nth-child(3) div {
-  background:$c;
-}
-#flip div:nth-child(4) div {
-  background:$d;
-}
-#flip div:last-child div {
-  background: rgba(83, 243, 9, 0.5);
-}
-
-@keyframes show {
-  0% {margin-top:-450px;}
-  10% {margin-top:-360px;}
-  20% {margin-top:-360px;}
-  30% {margin-top:-270px;}
-  40% {margin-top:-270px;}
-  50% {margin-top:-180px;}
-  60% {margin-top:-180px;}
-  70% {margin-top:-90px;}
-  80% {margin-top:-90px;}
-  90% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-360px;}
-}
-
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    *{
-      position: relative;
-      z-index: 5;
-    }
-    .class1a{
-      font-size: 7.5vw;
-      margin : auto;
-      margin-left: 1%;
-      margin-top: 50px;
-    }
-    .class1b{
-      font-size: 15vw;
-      margin : auto;
-      margin-left: 1%;
-      margin-top: 20px;
-    }
-    .class1c {
-      font-size: 6.5vw;
-      .grid-container {
-        grid-template-columns: auto 55vw;
-        grid-gap: 0;
-      }
-      img{
-        width: 50vw;
-      }
-    }
-
-    #container {
-      font-size:15px;
-    }
-
-    #flip {
-      height:45px;
-    }
-
-    #flip > div > div {
-      //padding:4px 12px;
-      height:30px;
-      margin-bottom:30px;
-    }
-
-    @keyframes show {
-      0% {margin-top:-225px;}
-      10% {margin-top:-180px;}
-      20% {margin-top:-180px;}
-      30% {margin-top:-135px;}
-      40% {margin-top:-135px;}
-      50% {margin-top:-90px;}
-      60% {margin-top:-90px;}
-      70% {margin-top:-45px;}
-      80% {margin-top:-45px;}
-      90% {margin-top:0px;}
-      99.99% {margin-top:0px;}
-      100% {margin-top:-180px;}
-    }
+@media screen and (max-width: 480px) {
+  .bar {
+    width: 4vh;
+  }
+  .main {
+    height: 50%;
+  }
+  .name {
+    font-size: 5vh;
+  }
+  .caro {
+    font-size: 3vh;
+  }
 }
