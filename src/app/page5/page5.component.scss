@@ -4,14 +4,63 @@ $c : #e74c3c;
 $d : #9b59b6;
 $e : #3498db;
 
-*{
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
+
+.box {
     background-color: $e;
 }
 
-@media only screen and (max-width: 768px) {
+.container {
+  margin-top: 15%;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  position: relative;
+}
+
+.tele {
+  font-weight: 800;
+  font-size: 20vh;
+  color: white;
+}
+
+.fa {
+  z-index: 5;
+  position: relative;
+  padding: 10px;
+  font-size: 25px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  transform: scale(1.25);
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background: black;
+  color: white;
+}
+
+@media only screen and (max-width: 480px) {
   /* For mobile phones: */
-  *{
-    position: relative;
-    z-index: 5;
+  .container {
+    margin-top: 50%;
+  }
+  .tele {
+    font-size: 10vh;
   }
 }

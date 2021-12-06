@@ -4,8 +4,75 @@ $c : #e74c3c;
 $d : #9b59b6;
 $e : #3498db;
 
-*{
+.box{
     background-color: $b;
+}
+
+.container {
+  // height: 300px;
+  // width: fit-content;
+  //top: 60px;
+  left: calc(50% - 300px);
+  display: flex;
+}
+
+.card {
+  z-index: 5;
+  display: flex;
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  //box-shadow: -1rem 0 3rem white;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+  border: black 4px solid;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: black;
+  font-weight: 300;
+  position: absolute;
+  text-align: center;
+  left: 20px;
+  top: 15px;
+  text-decoration: underline;
+  -webkit-text-decoration-style: double;
+  text-decoration-style: double;
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
 }
 
 

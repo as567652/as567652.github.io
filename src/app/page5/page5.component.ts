@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { flyInOut, expand } from '../animations/app.animation';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-page5',
