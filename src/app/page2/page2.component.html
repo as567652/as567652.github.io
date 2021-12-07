@@ -1,10 +1,19 @@
 <div class="box">
-    <!-- <div class="container">
-        
+    <div id="container">
+        <div class="photobanner">
+            <img *ngFor = "let l of ll1" src={{l.image}} alt = {{l.name}} name = {{l.name}}>
+            <img *ngFor = "let l of ll1" src={{l.image}} alt = {{l}}>
+        </div>
     </div>
-    <div *ngFor = "let l of ll1">
-        <h3 class="title">{{l.name}}</h3>
-        <img width="200px" src={{l.image}} alt={{l}} class="img-thumbnail">
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-6 mes"> 
+                <img *ngFor = "let l of ll1" src={{l.image}} alt = {{l}}>
+            </div>
+        </div>
     </div> -->
+    <div class="bottom-align-text col-12">
+        <h3>My Tech Stack ..</h3>
+    </div>
 </div>
 <app-circle-animation></app-circle-animation>
