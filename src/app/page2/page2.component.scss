@@ -20,7 +20,7 @@ img {
 }
 
 .bottom-align-text {
-  position: absolute;
+  position: fixed;
   bottom: 25%;
   text-align: center;
   h3 {
@@ -28,22 +28,23 @@ img {
     font-size: 15vh;
     color: white;
     animation: slide-in-right 5s 1s;
+    text-decoration: underline overline;
   }
 }
 
-.bottom {
-  height: 100%;
-  text-align: center;
-  z-index: 5;
-  position: relative;
-  div {
-    font-weight: 800;
-    margin-bottom: 0;
-    font-size: 15vh;
-    color: white;
-    animation: slide-in-right 5s 1s;
-  }
-}
+// .bottom {
+//   height: 100%;
+//   text-align: center;
+//   z-index: 5;
+//   position: relative;
+//   div {
+//     font-weight: 800;
+//     margin-bottom: 0;
+//     font-size: 15vh;
+//     color: white;
+//     animation: slide-in-right 5s 1s;
+//   }
+// }
 
 #container {
   height:200px;
@@ -59,7 +60,7 @@ img {
   left:0px; 
   overflow:hidden; 
   white-space: nowrap;
-  animation: bannermove 20s linear infinite;
+  animation: bannermove 15s linear infinite;
 }
 
 .photobanner img {    
@@ -80,5 +81,8 @@ img {
     h3 {
       font-size: 12vh;
     }
+  }
+  .photobanner {
+    animation: bannermove 10s linear infinite;
   }
 }

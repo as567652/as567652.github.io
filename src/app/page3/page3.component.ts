@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { flyInOut, expand } from '../animations/app.animation';
 
+import { PROJECTS } from '../shared/projects';
+
 @Component({
   selector: 'app-page3',
   templateUrl: './page3.component.html',
@@ -15,6 +17,8 @@ import { flyInOut, expand } from '../animations/app.animation';
   ]
 })
 export class Page3Component implements OnInit {
+
+  projects = PROJECTS;
 
   constructor() { }
 
