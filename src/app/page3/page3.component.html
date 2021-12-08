@@ -2,19 +2,30 @@
     <main class="main">
         <div class="container"> 
             <div class="scroll">
-                <a *ngFor = "let project of projects" href={{project.link}} target = "_blank">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src={{project.image}} loading="lazy" class="responsive" alt="{{project.name}}">
-                        </div>
-                        <div class="card-inner">
-                            <h3 class="text text-title">{{project.name}}</h3>
-                            <p class="paragraph truncate">
-                                {{project.desc}}
-                            </p>
-                        </div>
+                <!-- <a *ngFor = "let project of projects" href={{project.link}} target = "_blank"> -->
+                <div class="card" *ngFor = "let project of projects">
+                    <div class="card-inner">
+                        <h3 class="text text-title">{{project.name}}</h3>
                     </div>
-                </a>
+                    <div class="card-image">
+                        <img src={{project.image}} loading="lazy" class="responsive" alt="{{project.name}}">
+                    </div>
+                    <div class="card-inner">
+                        <p class="paragraph truncate">
+                            {{project.desc}}
+                        </p>
+                    </div>
+                    <div id="container2">
+                        <form action={{project.link}} target = "_blank">
+                            <button class="learn-more" type="submit">
+                                <span class="circle" aria-hidden="true">
+                                  <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">Learn More</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

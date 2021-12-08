@@ -14,10 +14,16 @@ export const PROJECTS : PROJECT[] = [
         link : "https://github.com/as567652/Web-Based-Voting-System"
     },
     {
-        name : "MArKVity (Know Your Market Activity)",
+        name : "(Know Your Market Activity) MArKVity",
         image : "assets/images/projects/markvity.png",
         desc : "An API based Web App, which will display market activity for your cryptocurrency. Displays nearly 2000 different cryptos. Crypto to Currency conversion is also availaible.", 
         link : "https://github.com/as567652/MArKVity"
+    },
+    {
+        name : "Colour Identification Of An Image Using OpenCV",
+        image : "assets/images/projects/color_ide.png",
+        desc : "OpenCV program to determine whether color of a car in provided image is Red, Green, Blue or White. This approach uses HSV values instead of RGB", 
+        link : "https://github.com/as567652/Color-Identification"
     },
     {
         name : "Histogram Equilization Using OpenCV",
@@ -26,7 +32,7 @@ export const PROJECTS : PROJECT[] = [
         link : "https://github.com/as567652/Histogram-Equilization"
     },
     {
-        name : "Noise Reduction Using DFT",
+        name : "Noise Reduction Using Fourier Transform",
         image : "assets/images/projects/dft.png",
         desc : "Implementing Case Specific Noise Reduction using Discrete Fourier Transform (DFT). This technique is used to reduce noise which happens due to interference of unknown signal.", 
         link : "https://github.com/as567652/Noise-Reduction-Using-Fourier-Transform"
@@ -46,7 +52,7 @@ export const PROJECTS : PROJECT[] = [
     {
         name : "Examination System Using Socket Prog.",
         image : "assets/images/projects/lan.png",
-        desc : "Client And Server communication GUI Application using tkinter and socket programming in python 3.", 
+        desc : "Client And Server communication GUI Application using tkinter and socket programming in python 3. Multithreading is used to communicate between tkinter and socket program continuously.", 
         link : "https://github.com/as567652/Lan-Based-Examination-using-Socket-Programming"
     }
 ]

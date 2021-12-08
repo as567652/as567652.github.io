@@ -29,10 +29,10 @@ button {
 img,
 video {
 	display: block;
-	max-width: 100%;
+	max-width: 93%;
 	height: auto;
 	object-fit: cover;
-  padding: 10px;
+  	margin: 10px;
 }
 
 // Elements
@@ -71,11 +71,12 @@ video {
 .truncate {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 4;
+	-webkit-line-clamp: 6;
 	max-width: 100%;
 	height: auto;
 	overflow: hidden;
 	text-overflow: clip;
+	padding: 5px;
 }
 
 // Main
@@ -109,7 +110,7 @@ video {
       position: relative;
       z-index: 5;
 			width: 19rem;
-			height: auto;
+			height: 31rem;
 			flex: 0 0 auto;
 			margin: 0 0.75rem;
 			border: none;
@@ -128,7 +129,7 @@ video {
 				display: block;
 				width: 100%;
 				height: auto;
-				padding-top: 110%;
+				padding-top: 60%;
 
 				img.responsive {
 					position: absolute;
@@ -138,15 +139,17 @@ video {
 					top: 0;
 					left: 0;
 					width: 100%;
-					height: 100%;
-					object-fit: cover;
+					//height: 100%;
+					object-fit: contain;
+					border-radius: 12px;
+					border: white solid 4px;
 				}
 			}
 
 			&-inner {
 				width: 100%;
 				height: auto;
-				padding: 1rem;
+				padding-top: 1rem;
 			}
 		}
 	}
@@ -158,6 +161,142 @@ video {
   }
   to {
     border: 4px black solid;
+  }
+}
+
+$bg: #f3f8fa;
+$white: #fff;
+$black: #282936;
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+  transition: $property $duration $ease;
+}
+
+// * {
+//   box-sizing: border-box;
+//   &::before, &::after {
+//     box-sizing: border-box;
+//   }
+// }
+
+// body {
+//   font-family: 'Mukta', sans-serif;
+//   font-size: 1rem;
+//   line-height: 1.5;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin: 0;
+//   min-height: 100vh;
+//   background: $bg;
+// }
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  &.learn-more {
+    width: 12rem;
+    height: auto;
+	bottom: 0;
+	position: absolute;
+	left: 4rem;
+	margin: 5px;
+    .circle {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      position: relative;
+      display: block;
+      margin: 0;
+      width: 3rem;
+      height: 3rem;
+      background: $white;
+      border-radius: 1.625rem;
+      .icon {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: $white;
+        &.arrow {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          left: 0.625rem;
+          width: 1.125rem;
+          height: 0.125rem;
+          background: none;
+          &::before {
+            position: absolute;
+            content: '';
+            top: -0.25rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid $c;
+            border-right: 0.125rem solid $c;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+    .button-text {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0.75rem 0;
+      margin: 0 0 0 1.85rem;
+      color: $white;
+      font-weight: 700;
+      line-height: 1.6;
+      text-align: center;
+      text-transform: uppercase;
+	//   a {
+	// 	text-decoration: none;
+	// 	color: white;
+	// 	:hover {
+	// 		color: $c;
+	// 	}
+	//   }
+    }
+  }
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon {
+        &.arrow {
+        background: $c;
+        transform: translate(1rem, 0);
+        }
+      }
+    }
+    .button-text {
+      color: $c;
+    }
+  }
+}
+
+@supports (display: grid) {
+//   body {
+//     display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   grid-gap: 0.625rem;
+//   grid-template-areas: ". main main ." ". main main .";
+//   }
+  
+  #container2 {
+    grid-area: main;
+    align-self: center;
+    justify-self: center;
   }
 }
 
