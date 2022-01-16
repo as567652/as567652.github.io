@@ -14,7 +14,6 @@ import { Page5Component } from './page5/page5.component';
 import { HeaderComponent } from './header/header.component';
 import { CircleAnimationComponent } from './circle-animation/circle-animation.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +29,7 @@ import { CircleAnimationComponent } from './circle-animation/circle-animation.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
